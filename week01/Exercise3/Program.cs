@@ -8,7 +8,7 @@ class Program
         int magic_number= randomGenerator.Next(1, 101);
         float guess_number = 0;
         int counter = 0;
-        string again = "yes";
+        
 
         
         while (guess_number != magic_number)
