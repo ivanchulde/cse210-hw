@@ -51,4 +51,8 @@ public class Scripture
         }
         return true;
     }
+    public Reference GetReference()
+    {
+    return _reference;
+    }
 }
