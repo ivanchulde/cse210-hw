@@ -4,21 +4,33 @@ public class Activity
     protected string _description;
     protected int _duration;
 
-    public Activity(string name, string description, int duration) {
+    public Activity()
+    { 
+        
+    }
+
+    public Activity(int duration)
+    {
+        _duration = duration;
+    }
+    
+    public Activity(string name, string description, int duration)
+    {
         _name = name;
         _description = description;
         _duration = duration;
     }
+    
 
-    public void DispplayStartingMessage() {
-        Console.WriteLine($"Starting {_name} activity.");
+    public void DispplayStartingMessage()
+    {
+        Console.WriteLine($"Welcome to the {_name} activity.");
         Console.WriteLine(_description);
-        Console.WriteLine($"Duration: {_duration} seconds.");
+
     }
 
     public void DisplayEndingMessage() {
-        Console.WriteLine($"Ending {_name} activity.");
-        Console.WriteLine("Well done!");
+        
         Console.WriteLine($"You completed the activity in {_duration} seconds.");
     }
 
@@ -48,7 +60,7 @@ public class Activity
                 i = 0;
             }
         }
-        Console.WriteLine("Done!");
+        
     }
 
     public void ShowCountdown(int seconds) {
@@ -57,6 +69,6 @@ public class Activity
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
-        Console.WriteLine("Done!");
+        
     }
 }
