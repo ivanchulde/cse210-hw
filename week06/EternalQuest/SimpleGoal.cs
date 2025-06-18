@@ -7,18 +7,23 @@ public class SimpleGoal : Goal
         _isComplete = false;
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-
+        if (!_isComplete)
+        {
+            _isComplete = true;
+            return _points;
+        }
+        return 0;
     }
 
     public override bool isComplete()
     {
-        return false;
+        return _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"SimpleGoal|{_shortName}|{_description}|{_points}";
     }
 }
