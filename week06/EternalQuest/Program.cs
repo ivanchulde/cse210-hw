@@ -1,9 +1,14 @@
 using System;
+using System.Runtime.InteropServices.Marshalling;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        GoalManager goalmanager = new GoalManager();
+        goalmanager.DisplayPlayerInfo();
+        goalmanager.Start();
+        
+        
     }
 }
